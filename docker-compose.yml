@@ -2,14 +2,14 @@ version: '3'
 
 services:
  consolehost:
-  image: host
+  image: testhost
   ports:
    - "8000:8000"
   networks:
    - mynat
 
- winformsclient:
-  image: client
+ consoleclient:
+  image: testclient
   networks:
    - mynat
   depends_on:

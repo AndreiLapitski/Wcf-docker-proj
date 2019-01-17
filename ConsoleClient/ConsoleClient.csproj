@@ -44,7 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\StringService\Reference.cs">
+    <Compile Include="Connected Services\TicketService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -56,31 +56,37 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\StringService\Service1.xsd">
+    <None Include="Connected Services\TicketService\ConsoleClient.TicketService.Ticket1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TicketService\Service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\StringService\Service11.xsd">
+    <None Include="Connected Services\TicketService\Service11.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\StringService\StringService.wsdl" />
+    <None Include="Connected Services\TicketService\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TicketService\TicketService.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\StringService\" />
+    <WCFMetadataStorage Include="Connected Services\TicketService\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\StringService\Service1.disco" />
+    <None Include="Connected Services\TicketService\Service1.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\StringService\configuration91.svcinfo" />
+    <None Include="Connected Services\TicketService\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\StringService\configuration.svcinfo" />
+    <None Include="Connected Services\TicketService\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\StringService\Reference.svcmap">
+    <None Include="Connected Services\TicketService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

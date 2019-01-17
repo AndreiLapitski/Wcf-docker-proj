@@ -1,5 +1,5 @@
 FROM microsoft/dotnet-framework:4.6.2
 WORKDIR /app
-COPY WindowsFormsClient/bin/Release/ .
+COPY ConsoleClient/bin/Release/ .
 
-ENTRYPOINT WindowsFormsClient.exe
+ENTRYPOINT ConsoleClient.exe
