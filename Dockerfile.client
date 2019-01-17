@@ -1,0 +1,5 @@
+FROM microsoft/dotnet-framework:4.6.2
+WORKDIR /app
+COPY WindowsFormsClient/bin/Release/ .
+
+ENTRYPOINT WindowsFormsClient.exe

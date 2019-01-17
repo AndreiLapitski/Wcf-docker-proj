@@ -1,0 +1,8 @@
+FROM microsoft/dotnet-framework:4.6.2
+WORKDIR /app
+COPY ConsoleAppHost/bin/Release/ .
+
+EXPOSE 80
+EXPOSE 8000
+
+ENTRYPOINT ConsoleAppHost.exe
