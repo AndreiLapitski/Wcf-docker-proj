@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WindowsFormsClient.TicketService {
+namespace WindowsFormsClient.TicketServiceFromContainer {
     using System.Runtime.Serialization;
     using System;
     
@@ -91,7 +91,7 @@ namespace WindowsFormsClient.TicketService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="TicketService.ITicketService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="TicketServiceFromContainer.ITicketService")]
     public interface ITicketService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITicketService/GetYourString", ReplyAction="http://tempuri.org/ITicketService/GetYourStringResponse")]
@@ -101,16 +101,16 @@ namespace WindowsFormsClient.TicketService {
         System.Threading.Tasks.Task<string> GetYourStringAsync(string str);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITicketService/GetAll", ReplyAction="http://tempuri.org/ITicketService/GetAllResponse")]
-        System.Collections.Generic.List<WindowsFormsClient.TicketService.Ticket> GetAll();
+        WindowsFormsClient.TicketServiceFromContainer.Ticket[] GetAll();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITicketService/GetAll", ReplyAction="http://tempuri.org/ITicketService/GetAllResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<WindowsFormsClient.TicketService.Ticket>> GetAllAsync();
+        System.Threading.Tasks.Task<WindowsFormsClient.TicketServiceFromContainer.Ticket[]> GetAllAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITicketService/Create", ReplyAction="http://tempuri.org/ITicketService/CreateResponse")]
-        int Create(WindowsFormsClient.TicketService.Ticket ticket);
+        int Create(WindowsFormsClient.TicketServiceFromContainer.Ticket ticket);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITicketService/Create", ReplyAction="http://tempuri.org/ITicketService/CreateResponse")]
-        System.Threading.Tasks.Task<int> CreateAsync(WindowsFormsClient.TicketService.Ticket ticket);
+        System.Threading.Tasks.Task<int> CreateAsync(WindowsFormsClient.TicketServiceFromContainer.Ticket ticket);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITicketService/Delete", ReplyAction="http://tempuri.org/ITicketService/DeleteResponse")]
         void Delete(int id);
@@ -119,19 +119,19 @@ namespace WindowsFormsClient.TicketService {
         System.Threading.Tasks.Task DeleteAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITicketService/Update", ReplyAction="http://tempuri.org/ITicketService/UpdateResponse")]
-        void Update(WindowsFormsClient.TicketService.Ticket ticket);
+        void Update(WindowsFormsClient.TicketServiceFromContainer.Ticket ticket);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITicketService/Update", ReplyAction="http://tempuri.org/ITicketService/UpdateResponse")]
-        System.Threading.Tasks.Task UpdateAsync(WindowsFormsClient.TicketService.Ticket ticket);
+        System.Threading.Tasks.Task UpdateAsync(WindowsFormsClient.TicketServiceFromContainer.Ticket ticket);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ITicketServiceChannel : WindowsFormsClient.TicketService.ITicketService, System.ServiceModel.IClientChannel {
+    public interface ITicketServiceChannel : WindowsFormsClient.TicketServiceFromContainer.ITicketService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class TicketServiceClient : System.ServiceModel.ClientBase<WindowsFormsClient.TicketService.ITicketService>, WindowsFormsClient.TicketService.ITicketService {
+    public partial class TicketServiceClient : System.ServiceModel.ClientBase<WindowsFormsClient.TicketServiceFromContainer.ITicketService>, WindowsFormsClient.TicketServiceFromContainer.ITicketService {
         
         public TicketServiceClient() {
         }
@@ -160,19 +160,19 @@ namespace WindowsFormsClient.TicketService {
             return base.Channel.GetYourStringAsync(str);
         }
         
-        public System.Collections.Generic.List<WindowsFormsClient.TicketService.Ticket> GetAll() {
+        public WindowsFormsClient.TicketServiceFromContainer.Ticket[] GetAll() {
             return base.Channel.GetAll();
         }
         
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<WindowsFormsClient.TicketService.Ticket>> GetAllAsync() {
+        public System.Threading.Tasks.Task<WindowsFormsClient.TicketServiceFromContainer.Ticket[]> GetAllAsync() {
             return base.Channel.GetAllAsync();
         }
         
-        public int Create(WindowsFormsClient.TicketService.Ticket ticket) {
+        public int Create(WindowsFormsClient.TicketServiceFromContainer.Ticket ticket) {
             return base.Channel.Create(ticket);
         }
         
-        public System.Threading.Tasks.Task<int> CreateAsync(WindowsFormsClient.TicketService.Ticket ticket) {
+        public System.Threading.Tasks.Task<int> CreateAsync(WindowsFormsClient.TicketServiceFromContainer.Ticket ticket) {
             return base.Channel.CreateAsync(ticket);
         }
         
@@ -184,11 +184,11 @@ namespace WindowsFormsClient.TicketService {
             return base.Channel.DeleteAsync(id);
         }
         
-        public void Update(WindowsFormsClient.TicketService.Ticket ticket) {
+        public void Update(WindowsFormsClient.TicketServiceFromContainer.Ticket ticket) {
             base.Channel.Update(ticket);
         }
         
-        public System.Threading.Tasks.Task UpdateAsync(WindowsFormsClient.TicketService.Ticket ticket) {
+        public System.Threading.Tasks.Task UpdateAsync(WindowsFormsClient.TicketServiceFromContainer.Ticket ticket) {
             return base.Channel.UpdateAsync(ticket);
         }
     }

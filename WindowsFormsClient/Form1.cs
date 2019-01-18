@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
-using WindowsFormsClient.TicketService;
+using WindowsFormsClient.TicketServiceFromContainer;
 
 namespace WindowsFormsClient
 {
     public partial class Form1 : Form
     {
-
         public Form1()
         {
             InitializeComponent();

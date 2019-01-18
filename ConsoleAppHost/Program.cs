@@ -9,7 +9,7 @@ namespace ConsoleAppHost
         {
             var host = new ServiceHost(typeof(WcfServiceLibrary1.TicketService));
             host.Open();
-            Console.WriteLine("TicketService is started");
+            Console.WriteLine("Ticket service is started");
 
             while (true)
             {

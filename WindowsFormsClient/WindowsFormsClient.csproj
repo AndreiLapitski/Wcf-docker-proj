@@ -48,7 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\TicketService\Reference.cs">
+    <Compile Include="Connected Services\TicketServiceFromContainer\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -73,17 +73,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Connected Services\TicketService\Service1.xsd">
+    <None Include="Connected Services\TicketServiceFromContainer\Service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\TicketService\Service11.xsd">
+    <None Include="Connected Services\TicketServiceFromContainer\Service11.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\TicketService\Service12.xsd">
+    <None Include="Connected Services\TicketServiceFromContainer\Service12.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\TicketService\TicketService.wsdl" />
-    <None Include="Connected Services\TicketService\WindowsFormsClient.TicketService.Ticket.datasource">
+    <None Include="Connected Services\TicketServiceFromContainer\TicketService.wsdl" />
+    <None Include="Connected Services\TicketServiceFromContainer\WindowsFormsClient.TicketServiceFromContainer.Ticket.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
@@ -103,19 +103,19 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\TicketService\" />
+    <WCFMetadataStorage Include="Connected Services\TicketServiceFromContainer\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\TicketService\Service1.disco" />
+    <None Include="Connected Services\TicketServiceFromContainer\Service1.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\TicketService\configuration91.svcinfo" />
+    <None Include="Connected Services\TicketServiceFromContainer\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\TicketService\configuration.svcinfo" />
+    <None Include="Connected Services\TicketServiceFromContainer\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\TicketService\Reference.svcmap">
+    <None Include="Connected Services\TicketServiceFromContainer\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

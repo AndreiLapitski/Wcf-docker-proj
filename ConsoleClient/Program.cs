@@ -9,11 +9,18 @@ namespace ConsoleClient
         {
             var client = new TicketService.TicketServiceClient();
             Console.WriteLine(client.GetYourString("Hi from client!"));
-           
-            client.Create(new Ticket() {
-                EventName = "From concole client",
-                Price = 666
-            });
+
+            var list = client.GetAll();
+            foreach (var item in list)
+            {
+                Console.WriteLine(item.EventName + " - " + item.Price);
+            }
+
+
+            //client.Create(new Ticket() {
+            //    EventName = "From concole client",
+            //    Price = 666
+            //});
 
             //Console.Read();
         }
