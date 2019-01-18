@@ -2,7 +2,7 @@ version: '3'
 
 services:
  consolehost:
-  image: 123415425389214897389457981729/wcfrepo:host
+  image: '${HOST}'
   ports:
    - "8000:8000"
   networks:
