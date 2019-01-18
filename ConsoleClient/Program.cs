@@ -1,4 +1,3 @@
-using ConsoleClient.TicketService;
 using System;
 
 namespace ConsoleClient
@@ -22,7 +21,7 @@ namespace ConsoleClient
             //    Price = 666
             //});
 
-            //Console.Read();
+            Console.Read();
         }
     }
 }
