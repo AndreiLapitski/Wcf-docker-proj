@@ -62,6 +62,10 @@
       <Project>{80C84A33-D8CF-45D4-AA0D-23906C0076A0}</Project>
       <Name>WcfServiceLibrary1</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WebApi\WebApi.csproj">
+      <Project>{1a587fbe-3693-4d5f-9f3e-d67e526886e8}</Project>
+      <Name>WebApi</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
