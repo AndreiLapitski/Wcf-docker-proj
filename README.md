@@ -4,7 +4,7 @@
 4) Run PowerShell cd the folder with .yml file and run docker-compose up
 
 
-IIS HOST
+IIS HOST (for local build and run)
 1) Create a new folder at D with any name ('folder' for example) -> Create folder with name 'content' in there
 2) Copy 'Dockerfile' into 'folder'
 3) Publish AppHost_IIS proj into D:\folder\content
