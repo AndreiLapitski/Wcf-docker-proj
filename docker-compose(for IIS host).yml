@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+ iishost:
+  image: 123415425389214897389457981729/wcf-project:iis-host
+  ports:
+   - "80:80"
+  networks:
+   - mynat
+
+networks:
+ mynat:
+  driver: nat 
+  
+# just compose this file and host wil be created on your PC
