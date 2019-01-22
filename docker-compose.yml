@@ -10,7 +10,7 @@ services:
    
  webapi:
   environment:
-   - USERNAME=LOL
+   - USERNAME=Container-Viktor
   image: 123415425389214897389457981729/wcf-project:web-api
   ports:
    - "8001:80"

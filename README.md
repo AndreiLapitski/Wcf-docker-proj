@@ -4,10 +4,13 @@
 4) Run PowerShell cd the folder with .yml file and run docker-compose up
 
 
-IIS HOST
+IIS HOST (for local build and run)
 1) Create a new folder at D with any name ('folder' for example) -> Create folder with name 'content' in there
 2) Copy 'Dockerfile' into 'folder'
 3) Publish AppHost_IIS proj into D:\folder\content
-4) Open PowerShell -> cd D:\folder\content -> docker build -t iis-site . -> docker run -d -p 8000:80 --name my-running-site iis-site
+4) Open PowerShell -> cd D:\folder -> docker build -t iis-host . -> docker run -d -p 8000:80 --name my-running-site iis-host
 5) To check IIS host: Open App.config in WindowsFormsClient and recomment the endpoint for IIS host -> rebuild and run this app
 
+IIS HOST (easy run)
+
+just run docker-compose(for IIS host).yml
