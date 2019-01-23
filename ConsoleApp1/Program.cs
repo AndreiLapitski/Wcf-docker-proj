@@ -1,6 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using ConsoleApp1.TicketService;
 using System;
-using System.Collections;
 using System.Net.Http;
 using System.Net.Http.Headers;
 
@@ -10,26 +9,33 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            using(var client = new HttpClient())
-            {              
-                client.BaseAddress = new Uri("http://localhost:51477");
-                client.DefaultRequestHeaders.Accept.Clear();
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-                //method environment-variables
-                //var variables = client.GetAsync("environment-variables").Result;
-                //var deserVariables = JsonConvert.DeserializeObject<IDictionary>(variables.Content.ReadAsStringAsync().Result);
-
-                //foreach (var item in deserVariables.Keys)
-                //{
-                //    Console.WriteLine($"{item} -- {deserVariables[item]}");
-                //}
-
-                //method environment-variable/key
-                //HttpResponseMessage response = client.GetAsync("environment-variable/" + "USERNAME").Result;
-                //string value = response.Content.ReadAsStringAsync().Result;
-                //Console.WriteLine(value);
+            TicketServiceClient client = new TicketServiceClient();
+            var list = client.GetAll();
+            foreach (var item in list)
+            {
+                Console.WriteLine($"{item.EventName} - {item.Price}");
             }
+
+            //using(var client = new HttpClient())
+            //{              
+            //    client.BaseAddress = new Uri("http://localhost:51477");
+            //    client.DefaultRequestHeaders.Accept.Clear();
+            //    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            //    //method environment-variables
+            //    //var variables = client.GetAsync("environment-variables").Result;
+            //    //var deserVariables = JsonConvert.DeserializeObject<IDictionary>(variables.Content.ReadAsStringAsync().Result);
+
+            //    //foreach (var item in deserVariables.Keys)
+            //    //{
+            //    //    Console.WriteLine($"{item} -- {deserVariables[item]}");
+            //    //}
+
+            //    //method environment-variable/key
+            //    //HttpResponseMessage response = client.GetAsync("environment-variable/" + "USERNAME").Result;
+            //    //string value = response.Content.ReadAsStringAsync().Result;
+            //    //Console.WriteLine(value);
+            //}
 
             Console.Read();
         }

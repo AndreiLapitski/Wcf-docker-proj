@@ -15,7 +15,9 @@ services:
   ports:
    - "8001:80"
   networks:
-   - mynat 
+   - mynat
+  depends_on:
+   - iishost  
 
 networks:
  mynat:

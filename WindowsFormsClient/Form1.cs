@@ -1,4 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text;
 using System.Windows.Forms;
 using WindowsFormsClient.TicketServiceFromContainer;
 
@@ -117,6 +124,30 @@ namespace WindowsFormsClient
                     MessageBox.Show("Incorrect data or item is not selected");
                 }
             }          
+        }
+
+        private void button_variables_Click(object sender, EventArgs e)
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(ConfigurationManager.AppSettings["BaseAddressForClient"]);
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                HttpResponseMessage response = client.GetAsync("environment-variables").Result;
+                IDictionary deserVariables = JsonConvert.DeserializeObject<IDictionary>(response.Content.ReadAsStringAsync().Result);
+
+                StringBuilder keys_values = new StringBuilder();
+                int number = 1;
+                foreach (object item in deserVariables.Keys)
+                {
+                    keys_values.AppendLine($"{number}) {item}     ->      {deserVariables[item]}");
+                    keys_values.AppendLine();
+                    number++;
+                }
+
+                MessageBox.Show(keys_values.ToString());
+            }
         }
     }
 }

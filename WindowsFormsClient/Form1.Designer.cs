@@ -42,6 +42,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_event_update = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.button_variables = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox_update.SuspendLayout();
             this.SuspendLayout();
@@ -116,7 +117,7 @@
             // 
             this.button_delete.Location = new System.Drawing.Point(249, 223);
             this.button_delete.Name = "button_delete";
-            this.button_delete.Size = new System.Drawing.Size(539, 79);
+            this.button_delete.Size = new System.Drawing.Size(325, 79);
             this.button_delete.TabIndex = 2;
             this.button_delete.Text = "Delete";
             this.button_delete.UseVisualStyleBackColor = true;
@@ -178,11 +179,22 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Event";
             // 
+            // button_variables
+            // 
+            this.button_variables.Location = new System.Drawing.Point(580, 223);
+            this.button_variables.Name = "button_variables";
+            this.button_variables.Size = new System.Drawing.Size(208, 79);
+            this.button_variables.TabIndex = 4;
+            this.button_variables.Text = "Get env variables";
+            this.button_variables.UseVisualStyleBackColor = true;
+            this.button_variables.Click += new System.EventHandler(this.button_variables_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 314);
+            this.Controls.Add(this.button_variables);
             this.Controls.Add(this.groupBox_update);
             this.Controls.Add(this.button_delete);
             this.Controls.Add(this.groupBox1);
@@ -213,6 +225,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox_event_update;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button_variables;
     }
 }
 
